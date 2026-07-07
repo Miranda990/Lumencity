@@ -1,0 +1,242 @@
+/* Reset básico e fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #060b07; /* Cor de fundo escura caso a imagem falhe */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o card à esquerda */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Espaço reservado para a sua imagem de fundo */
+.bg-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* COLOQUE O CAMINHO DA SUA IMAGEM NA LINHA ABAIXO */
+    background-image: url('../images/01.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Fica atrás do formulário */
+}
+
+.lumen{
+
+    width:110px;
+
+    height:auto;
+
+    display:block;
+}
+
+
+/* Card de Login Flutuante */
+.login-card {
+    position: relative;
+    z-index: 2; /* Garante que fica acima da imagem */
+    background-color: rgba(18, 22, 19, 0.95); /* Tom grafite bem escuro e fosco */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px; /* Bordas bem arredondadas idênticas à imagem */
+    width: 440px;
+    max-width: 90%;
+    padding: 48px 40px;
+    
+    /* Margens e afastamentos da lateral esquerda, topo e base */
+    margin-left: 5%; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Leve efeito de vidro */
+}
+
+/* Logo e Marca */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    color: #2ecc71; /* Verde característico */
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+/* Textos de Boas-vindas */
+.welcome-title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.welcome-subtitle {
+    color: #8a928c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 36px;
+}
+
+/* Formulário e Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #8a928c;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background-color: #181d19;
+    border: 1px solid #2d352f;
+    border-radius: 12px;
+    padding: 16px 16px 16px 48px; /* Espaço para o ícone esquerdo */
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-wrapper input:focus {
+    border-color: #2ecc71;
+}
+
+/* Ícones internos dos inputs */
+.input-icon {
+    position: absolute;
+    left: 18px;
+    color: #555e56;
+    font-size: 16px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 18px;
+    color: #555e56;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: #ffffff;
+}
+
+/* Botão Sign In */
+.btn-submit {
+    width: 100%;
+    background-color: #2ecc71; /* Verde vibrante do botão */
+    color: #0d110e;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+/* Link Esqueci a Senha */
+.forgot-password {
+    display: inline-block;
+    color: #2ecc71;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 24px;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #27ae60;
+}
+
+/* Divisor "or" */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #2d352f;
+}
+
+.divider span {
+    padding: 0 16px;
+    color: #555e56;
+    font-size: 14px;
+}
+
+/* Links do Rodapé */
+.signup-text {
+    color: #8a928c;
+    font-size: 14px;
+    text-align: center;
+}
+
+.signup-link {
+    color: #2ecc71;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.signup-link:hover {
+    color: #27ae60;
+}
+
+/* Responsividade Básica para Telas Pequenas (Mobile) */
+@media (max-width: 480px) {
+    .login-card {
+        margin: 20px auto;
+        padding: 32px 24px;
+        width: 95%;
+    }
+}

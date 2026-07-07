@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumencity - Join the Future</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-image-container"></div>
+
+    <main class="login-card">
+        <div class="brand">
+            <img class="lumen" src="images/lumencity.png" alt="Lumencity Logo">
+        </div>
+
+        <h1 class="welcome-title">Join the Future</h1>
+        <p class="welcome-subtitle">Create an account to start managing sustainable urban growth.</p>
+
+        <form id="registerForm" autocomplete="off">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" placeholder="Email address" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <i class="fa-regular fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                </div>
+            </div>
+
+            <div class="terms-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="terms" required>
+                    <span class="checkmark"></span>
+                    <span class="terms-text">
+                        I agree to the <a href="#" class="accent-link">Terms of Service</a> and <a href="#" class="accent-link">Privacy Policy</a>
+                    </span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Create Account</button>
+        </form>
+
+        <p class="signup-text">Already have an account? <a href="#" class="signup-link">Sign In</a></p>
+    </main>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

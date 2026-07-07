@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumenCity - Devices</title>
+    <link rel="stylesheet" href="css/devices.css">
+    <!-- Lucide Icons para manter consistência idêntica com o script da imagem 0307.png -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Lateral (Mantendo a fisionomia exata de 0307.png) -->
+        <aside class="sidebar">
+            <div class="logo">
+                 <span class="brand-name"><img class="lumen" src="images/lumencity.png" alt="Lumencity Logo"></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item">
+                    <i data-lucide="home"></i> Home
+                </a>
+                <a href="analytics.html" class="nav-item">
+                    <i data-lucide="bar-chart-3"></i> Analytics
+                </a>
+                <a href="devices.html" class="nav-item active">
+                    <i data-lucide="layout-grid"></i> Devices
+                </a>
+                <a href="configuracoes.html" class="nav-item">
+                    <i data-lucide="settings"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal (lumencity_devices_desktop.jpg) -->
+        <main class="main-content">
+            <!-- Cabeçalho -->
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Devices</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Alex Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Barra de Busca e Filtros Avançados -->
+            <section class="search-filter-row">
+                <div class="search-box">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search devices..." id="deviceSearch">
+                </div>
+                <button class="action-btn add-btn"><i data-lucide="plus"></i></button>
+                <button class="action-btn filter-btn"><i data-lucide="sliders"></i></button>
+            </section>
+
+            <!-- Categoria 1: Smart Recycling Bins -->
+            <section class="device-category">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i data-lucide="trash-2" class="category-icon green-text"></i>
+                        <h2>Smart Recycling Bins</h2>
+                        <span class="count-badge">2</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="toggle-arrow"></i>
+                </div>
+
+                <div class="devices-grid">
+                    <!-- Card 1 -->
+                    <div class="card device-card">
+                        <div class="card-left">
+                            <div class="icon-wrapper square-icon">
+                                <i data-lucide="trash-2"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>Kitchen Smart Bin</h3>
+                                <span class="status status-active"><span class="dot"></span> Active</span>
+                                <p class="pts-text"><span class="highlight-green">450 pts</span> earned</p>
+                                <span class="footer-meta"><i data-lucide="map-pin"></i> Apartment 4B</span>
+                            </div>
+                        </div>
+                        <div class="card-right">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="signal"><i data-lucide="wifi"></i> 98%</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card device-card">
+                        <div class="card-left">
+                            <div class="icon-wrapper square-icon">
+                                <i data-lucide="glass-water"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>Community Glass Collector</h3>
+                                <span class="status status-active"><span class="dot"></span> Active</span>
+                                <p class="pts-text"><span class="highlight-green">1,200 pts</span> earned</p>
+                                <span class="footer-meta"><i data-lucide="map-pin"></i> Central Plaza</span>
+                            </div>
+                        </div>
+                        <div class="card-right">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="signal"><i data-lucide="wifi"></i> 96%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categoria 2: Resource Monitors -->
+            <section class="device-category">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i data-lucide="droplet" class="category-icon green-text"></i>
+                        <h2>Resource Monitors</h2>
+                        <span class="count-badge">2</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="toggle-arrow"></i>
+                </div>
+
+                <div class="devices-grid">
+                    <!-- Card 3 -->
+                    <div class="card device-card">
+                        <div class="card-left">
+                            <div class="icon-wrapper square-icon">
+                                <i data-lucide="droplet"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>Smart Water Meter</h3>
+                                <span class="status status-eco"><span class="dot"></span> Eco-Mode</span>
+                                <p class="pts-text"><span class="highlight-green">15%</span> below avg</p>
+                                <span class="footer-meta highlight-green">300 pts bonus</span>
+                            </div>
+                        </div>
+                        <div class="card-right">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="signal"><i data-lucide="wifi"></i> 97%</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card device-card">
+                        <div class="card-left">
+                            <div class="icon-wrapper square-icon">
+                                <i data-lucide="plug"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>Energy Smart Plug</h3>
+                                <span class="status status-standby"><span class="dot"></span> Standby</span>
+                                <p class="pts-text grey-desc">Device: Washing Machine</p>
+                                <span class="footer-meta">Off-peak usage active</span>
+                            </div>
+                        </div>
+                        <div class="card-right">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="signal"><i data-lucide="wifi"></i> 65%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/devices.js"></script>
+</body>
+</html>

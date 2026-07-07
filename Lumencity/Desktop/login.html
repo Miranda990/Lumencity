@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumencity - Welcome Back</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo_v1-0.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="bg-image-container"></div>
+
+    <main class="login-card">
+        <div class="brand">
+            <span class="brand-name"><img class="lumen" src="images/lumencity.png" alt="Lumencity Logo"></span>
+        </div>
+
+        <h1 class="welcome-title">Welcome Back</h1>
+        <p class="welcome-subtitle">Sign in to manage your smart city infrastructure</p>
+
+        <form id="loginForm" autocomplete="off">
+            <div class="input-group">
+                <label for="email">Email address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="email" id="email" placeholder="Email address" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+
+        <a href="#" class="forgot-password">Forgot password?</a>
+
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <p class="signup-text">Don't have an account? <a href="cadastro.html" class="signup-link">Sign Up</a></p>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

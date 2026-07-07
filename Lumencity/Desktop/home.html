@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumenCity Dashboard</title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Lucide Icons para os ícones do menu e cards -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                 <span class="brand-name"><img class="lumen" src="images/lumencity.png" alt="Lumencity Logo"></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item active">
+                    <i data-lucide="home"></i> Home
+                </a>
+                <a href="analytics.html" class="nav-item">
+                    <i data-lucide="bar-chart-3"></i> Analytics
+                </a>
+                <a href="devices.html" class="nav-item">
+                    <i data-lucide="layout-grid"></i> Devices
+                </a>
+                <a href="configuracoes.html" class="nav-item">
+                    <i data-lucide="settings"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Cabeçalho -->
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Hello, Alex</h1>
+                    <p>Here's what's happening in your city today.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Alex Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Grid de Cards Superior -->
+            <section class="top-row">
+                <!-- Card Principal: Energy Efficiency -->
+                <div class="card main-efficiency-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <div class="icon-wrapper green-bg">
+                                <i data-lucide="leaf"></i>
+                            </div>
+                            <div>
+                                <h2>Energy Efficiency</h2>
+                                <p class="subtitle">Overall Efficiency</p>
+                            </div>
+                        </div>
+                        <button class="more-btn"><i data-lucide="more-horizontal"></i></button>
+                    </div>
+
+                    <div class="card-body-layout">
+                        <div class="efficiency-info">
+                            <div class="percentage-display">78<span class="percent-sign">%</span></div>
+                            <div class="status-tag">Efficient</div>
+                            <p class="description">Great job! You're saving more energy than yesterday.</p>
+                            <a href="#" class="insights-link">
+                                <i data-lucide="trending-up"></i> View Insights <i data-lucide="chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <!-- Gráfico de Rosca Central -->
+                        <div class="progress-chart-container">
+                            <svg class="progress-ring" width="160" height="160">
+                                <circle class="progress-ring__background" stroke="#0a1a15" stroke-width="12" fill="transparent" r="70" cx="80" cy="80"/>
+                                <circle class="progress-ring__bar" stroke="#00e676" stroke-width="12" fill="transparent" r="70" cx="80" cy="80"/>
+                            </svg>
+                            <div class="progress-text">
+                                <i data-lucide="zap" class="bolt-icon"></i>
+                                <span class="chart-number">78%</span>
+                                <span class="chart-label">of target</span>
+                            </div>
+                        </div>
+
+                        <!-- Ilustração de fundo da cidade -->
+                        <div class="city-silhouette"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid de Mini Cards Central -->
+            <section class="stats-grid">
+                <!-- Smart Lighting -->
+                <div class="card sub-card lighting-card">
+                    <div class="sub-card-content">
+                        <div class="icon-wrapper square-icon">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <div class="sub-card-text">
+                            <h3>Smart Lighting</h3>
+                            <div class="sub-number">92%</div>
+                            <p class="sub-status text-green">Operational</p>
+                        </div>
+                    </div>
+                    <button class="action-arrow"><i data-lucide="arrow-right"></i></button>
+                </div>
+
+                <!-- Solar Output -->
+                <div class="card sub-card solar-card">
+                    <div class="sub-card-content">
+                        <div class="icon-wrapper square-icon">
+                            <i data-lucide="sun"></i>
+                        </div>
+                        <div class="sub-card-text">
+                            <h3>Solar Output</h3>
+                            <div class="sub-number">4.2 <span class="unit">MW</span></div>
+                            <p class="sub-status">Live Output</p>
+                        </div>
+                    </div>
+                    <button class="action-arrow"><i data-lucide="arrow-right"></i></button>
+                </div>
+
+                <!-- City Traffic -->
+                <div class="card sub-card traffic-card">
+                    <div class="sub-card-content">
+                        <div class="icon-wrapper square-icon">
+                            <i data-lucide="car"></i>
+                        </div>
+                        <div class="sub-card-text">
+                            <h3>City Traffic</h3>
+                            <div class="sub-number">36%</div>
+                            <p class="sub-status text-yellow">Moderate</p>
+                        </div>
+                    </div>
+                    <button class="action-arrow"><i data-lucide="arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Card Inferior: Energy Trend Chart -->
+            <section class="bottom-row">
+                <div class="card chart-card">
+                    <div class="chart-header">
+                        <h2>Energy Trend (24h)</h2>
+                        <div class="dropdown-selector">
+                            <span>Last 24 Hours</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="trend-chart-container">
+                        <!-- Eixo Y -->
+                        <div class="y-axis">
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+                        </div>
+                        <!-- Área do gráfico -->
+                        <div class="chart-area">
+                            <div class="grid-lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <!-- Gráfico de Linha Vetorial (SVG) -->
+                            <svg viewBox="0 0 1000 200" preserveAspectRatio="none" class="wave-svg">
+                                <defs>
+                                    <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#00e676" stop-opacity="0.25"/>
+                                        <stop offset="100%" stop-color="#00e676" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 0,160 Q 120,150 250,130 T 500,60 T 750,140 T 1000,130 L 1000,200 L 0,200 Z" fill="url(#chart-glow)" />
+                                <path d="M 0,160 Q 120,150 250,130 T 500,60 T 750,140 T 1000,130" fill="none" stroke="#00e676" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <!-- Eixo X -->
+                        <div class="x-axis">
+                            <span>00:00</span>
+                            <span>04:00</span>
+                            <span>08:00</span>
+                            <span>12:00</span>
+                            <span>16:00</span>
+                            <span>20:00</span>
+                            <span>24:00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

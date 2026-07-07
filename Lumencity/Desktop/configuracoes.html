@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumenCity - Settings</title>
+    <link rel="stylesheet" href="css/configuracoes.css">
+    <!-- Lucide Icons mantido para consistência global -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Lateral (Fisionomia idêntica com 'Settings' ativo) -->
+        <aside class="sidebar">
+            <div class="logo">
+                 <span class="brand-name"><img class="lumen" src="images/lumencity.png" alt="Lumencity Logo"></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item">
+                    <i data-lucide="home"></i> Home
+                </a>
+                <a href="analytics.html" class="nav-item">
+                    <i data-lucide="bar-chart-3"></i> Analytics
+                </a>
+                <a href="devices.html" class="nav-item">
+                    <i data-lucide="layout-grid"></i> Devices
+                </a>
+                <a href="configuracoes.html" class="nav-item active">
+                    <i data-lucide="settings"></i> Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal (lumencity_settings_desktop.jpg) -->
+        <main class="main-content">
+            <!-- Cabeçalho -->
+            <header class="main-header">
+                <div class="welcome-text">
+                    <h1>Settings</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Alex Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Card de Perfil Principal -->
+            <section class="profile-section">
+                <div class="card profile-card">
+                    <div class="profile-main-info">
+                        <div class="avatar-container">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Alex Johnson" class="large-avatar">
+                        </div>
+                        <div class="profile-meta">
+                            <h2>Alex Johnson</h2>
+                            <p class="profile-email">alex.johnson@lumencity.com</p>
+                            <a href="#" class="manage-profile-btn">
+                                Manage Profile <i data-lucide="chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grupos de Configuração -->
+            <!-- Seção: Account -->
+            <section class="settings-group">
+                <h3 class="group-title">ACCOUNT</h3>
+                <div class="card list-card">
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="shield" class="item-icon green-text"></i>
+                            <span>Security</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="arrow-right"></i>
+                    </div>
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="lock" class="item-icon green-text"></i>
+                            <span>Privacy</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="arrow-right"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Notifications -->
+            <section class="settings-group">
+                <h3 class="group-title">NOTIFICATIONS</h3>
+                <div class="card list-card">
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="bell" class="item-icon green-text"></i>
+                            <span>Push Notifications</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="arrow-right"></i>
+                    </div>
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="mail" class="item-icon green-text"></i>
+                            <span>Email Notifications</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="arrow-right"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Preferences -->
+            <section class="settings-group">
+                <h3 class="group-title">PREFERENCES</h3>
+                <div class="card list-card">
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="globe" class="item-icon green-text"></i>
+                            <span>Language</span>
+                        </div>
+                        <div class="item-right">
+                            <span class="value-text">English</span>
+                            <i data-lucide="chevron-right" class="arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="list-item clickable">
+                        <div class="item-left">
+                            <i data-lucide="moon" class="item-icon green-text"></i>
+                            <span>Dark Mode</span>
+                        </div>
+                        <div class="item-right">
+                            <span class="value-text">On</span>
+                            <i data-lucide="chevron-right" class="arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/configuracoes.js"></script>
+</body>
+</html>

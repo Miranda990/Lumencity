@@ -1,0 +1,563 @@
+/* Resets e Variáveis Consolidadas baseadas estritamente em 0307.png */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-dark: #0f1115;
+    --sidebar-bg: #13161c;
+    --card-bg: #161a23;
+    --text-primary: #ffffff;
+    --text-secondary: #7e8494;
+    --neon-green: #00e676;
+    --neon-green-glow: rgba(0, 230, 118, 0.25);
+    --border-color: #222834;
+    --accent-orange: #ffaa00;
+    --accent-blue: #00b0ff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Estilização Padrão */
+.sidebar {
+    width: 240px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.logo-icon {
+    color: var(--neon-green);
+    filter: drop-shadow(0 0 8px var(--neon-green-glow));
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--neon-green);
+    background-color: rgba(0, 230, 118, 0.05);
+}
+
+.nav-item i {
+    width: 20px;
+    height: 20px;
+}
+
+/* Estrutura de Layout Principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.welcome-text p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--neon-green);
+}
+
+.profile-avatar img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+}
+
+/* Estilo Base dos Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 24px;
+    position: relative;
+}
+
+.card-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-title-group h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.icon-header-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: rgba(0, 230, 118, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-header-box i {
+    width: 16px;
+    height: 16px;
+}
+
+/* Grid Superior de Métricas */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+}
+
+.token-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-value {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.unit-label {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.badge-growth {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(0, 230, 118, 0.08);
+    color: var(--neon-green);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 8px;
+}
+
+.badge-growth i {
+    width: 14px;
+    height: 14px;
+}
+
+.equivalence-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 14px;
+}
+
+/* Moeda verde brilhante com neon */
+.glowing-coin {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px double var(--neon-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px var(--neon-green-glow), inset 0 0 15px var(--neon-green-glow);
+    background: rgba(0, 230, 118, 0.02);
+    margin-right: 20px;
+}
+
+.glowing-coin i {
+    width: 44px;
+    height: 44px;
+    color: var(--neon-green);
+    filter: drop-shadow(0 0 4px var(--neon-green));
+}
+
+/* Layout Resource Impact */
+.impact-columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.impact-stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.bolt-icon { color: var(--neon-green); width: 32px; height: 32px; }
+.droplet-icon { color: var(--accent-blue); width: 32px; height: 32px; }
+
+.stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.stat-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.divider-line {
+    width: 1px;
+    height: 50px;
+    background-color: var(--border-color);
+    margin: 0 20px;
+}
+
+.impact-footer-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Grid de Gráficos */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+}
+
+/* Customização do Gráfico de Barras Semanais */
+.bar-chart-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    height: 180px;
+    margin-top: 10px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-align: right;
+    width: 24px;
+    padding-bottom: 24px;
+}
+
+.chart-bars-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-lines-horizontal {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+}
+
+.grid-lines-horizontal .line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.bars-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-value {
+    font-size: 11px;
+    color: var(--neon-green);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.bar {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 230, 118, 0.2), var(--neon-green));
+    border-radius: 6px 6px 0 0;
+    transition: height 0.5s ease;
+}
+
+.day-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    height: 16px;
+}
+
+.chart-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+}
+
+/* Customização do Gráfico Donut (Breakdown) */
+.donut-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100% - 40px);
+}
+
+.donut-svg-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.donut-chart {
+    transform: rotate(-90deg);
+}
+
+.donut-segment {
+    transition: stroke-dashoffset 0.35s;
+}
+
+.donut-center-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background-color: #1c2330;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+
+.donut-center-icon i {
+    width: 20px;
+    height: 20px;
+    color: var(--neon-green);
+}
+
+.donut-legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.dot-color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dot-color.recycling { background-color: var(--neon-green); }
+.dot-color.energy { background-color: var(--accent-orange); }
+.dot-color.water { background-color: var(--accent-blue); }
+
+.pct {
+    font-weight: 700;
+    width: 40px;
+    margin-right: 8px;
+}
+
+.legend-item .lbl {
+    color: var(--text-secondary);
+}
+
+.legend-item:nth-child(1) .pct { color: var(--neon-green); }
+.legend-item:nth-child(2) .pct { color: var(--accent-orange); }
+.legend-item:nth-child(3) .pct { color: var(--accent-blue); }
+
+/* Seção de Transações Recentes (Listas Uniformes) */
+.list-header-spacing {
+    margin-bottom: 12px;
+}
+
+.category-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-row:last-child {
+    border-bottom: none;
+}
+
+.tx-left, .tx-right {
+    display: flex;
+    align-items: center;
+}
+
+.tx-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+}
+
+.tx-amount {
+    font-weight: 600;
+    font-size: 14px;
+    width: 120px;
+}
+
+.tx-amount.plus {
+    color: var(--neon-green);
+}
+
+.tx-details {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.tx-date {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-right: 16px;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--text-secondary);
+}
+
+.green-text { color: var(--neon-green); }
+
+.lumen{
+
+    width:110px;
+
+    height:auto;
+
+    display:block;
+}
